@@ -1,0 +1,443 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/*=====Color=====*/
+:root {
+    --dark-blue: #005FAE;
+    --light-blue: #6199C6;
+    --dark-orange: #EE6C4D;
+    --light-green: #00C346;
+    --light-grey: #F0F0F0;
+    --black-font: #424242;
+    --grey-font: #999999;
+    --black: #212121;
+    --grey-line: #E0E0E0;
+}
+html {
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container {
+    width: 100%;
+    max-width: 1330px;
+    padding: 0 33px;
+}
+
+/*=================
+-------Header------
+===================*/
+.header {
+    padding: 12px 0;
+    margin-bottom: 32px;
+}
+.header-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-inner-top {
+    widows: 100%;
+    height: 44px;
+    background: var(--dark-blue);
+}
+.header-inner-bottom {
+    widows: 100%;
+    height: 44px;
+    background: #F7F7F7;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/*=================
+--------Main-------
+===================*/
+.page-content {
+    display: flex;
+    justify-content: space-between;
+
+}
+.content {
+    flex-basis: 90%;
+
+}
+.aside {
+    flex-basis: 10%;
+}
+
+/*--------About company--------*/
+
+/*breadcrums*/
+
+.breadcrums {
+    display: flex;
+    margin-bottom: 16px;
+}
+.breadcrums-item:not(:last-child)::after {
+    content: "/";
+    display: inline-block;
+    margin: 0 4px;
+}
+.breadcrums-item-link {
+    color: var(--grey-font);
+    font-size: 14px;
+    line-height: 20px;
+}
+.breadcrums-item-link.active {
+    color: #666666;
+}
+
+/*search*/
+
+.search-form {
+    width: 70%;
+    margin-bottom: 32px;
+}
+.search-form-title {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: 2px solid var(--dark-blue);
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 20px;
+    text-indent: 12px;
+}
+.search-form-btn {
+    width: 64px;
+    height: 40px;
+    margin-left: -4px;
+    border: 0;
+    color: #fff;
+    background: var(--dark-blue);
+    position: absolute;
+    border-radius: 3px;
+}
+
+/*back*/
+.back {
+    margin-bottom: 16px;
+}
+.back-link {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--dark-blue);
+    text-decoration: none;
+    
+}
+
+/*company name*/
+
+.company-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+h1 {
+    margin-left: 10px;
+}
+
+/*button group*/
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+.view, .comment-link {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--grey-font);
+    text-decoration: none;
+}
+.view-text {
+    margin-left: 6px;
+}
+.comment-link {
+    display: flex;
+    margin-left: 24px;
+}
+.comment-link span {
+    padding-top: 1px;
+}
+.comment-text:hover {
+    text-decoration-line: underline;
+}
+.button-group {
+    margin-bottom: 42px;
+}
+.button-group-left {
+    display: flex;
+}
+.question-link {
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--light-green);
+    text-decoration: none;
+    border: 1px solid var(--light-green);
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.question-link-green {
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid var(--light-green);
+    border-radius: 3px;
+    background-color: var(--light-green);
+    pointer-events: none;
+    cursor: default;
+}
+.question-link:hover, .qestion-link:active {
+    background-color: var(--light-green);
+    color: #fff;
+    transition: background-color .3s linear;
+    border: 0;
+}
+
+
+/*--------About company--------*/
+
+.company {
+    display: flex;
+
+}
+.company-ads {
+    flex-basis: 68%;
+    margin-top: 14px;
+}
+h2 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--grey-line);
+}
+.table {
+    margin: 16px 0 48px 0;;
+}
+.table-row {
+    display: flex;
+    color: var(--black-font);
+    font-size: 12px;
+    line-height: 16px;
+}
+.table-row.name {
+    height: 32px;
+    background: var(--light-grey);
+    border-radius: 3px;
+    padding: 8px 0;
+}
+.table-row.inner {
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--grey-line);
+}
+.table-name-btn {
+    flex-basis: 13%;
+}
+.table-name-ad {
+    flex-basis: 40%;
+}
+.table-name-time {
+    flex-basis: 10%;
+    text-align: end;
+    margin-right: 10px;
+}
+.table-name-view {
+    flex-basis: 7%;
+    text-align: end;
+    margin-right: 17px;
+}
+.table-name-published {
+    flex-basis: 30%;
+}
+.btn-sell {
+    height: 24px;
+    width: 60px;
+    background: var(--light-blue);
+    border-radius: 3px;
+    text-align: center;
+    margin: 0 auto;
+}
+.btn-sell:hover {
+    opacity: 0.8;
+}
+.btn-sell:active {
+    opacity: 0.32;
+}
+.btn-sell-link {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 0;
+    vertical-align: sub;
+}
+.btn-sell.buy {
+    background:var(--dark-orange);
+}
+.table-name-ad-link {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    color: var(--dark-blue);
+    text-decoration: none;
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.table-name-ad-link:hover, 
+.table-name-ad-link:active {
+    text-decoration-line: underline;
+    color: var(--dark-blue);
+}
+.table-name-published {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.table-name-published-img {
+    width: 30px;
+    height: 40px;
+    margin-right: 8px;
+}
+.table-name-published-img.seller1 {
+    background: url(../img/default-userphoto-big.png) center no-repeat;
+    background-size: cover;
+}
+.table-name-published-img.seller2 {
+    background: url(../img/image.png) center no-repeat;
+    background-size: cover;
+}
+.table-name-published-employee {
+    padding-top: 5px;
+}
+.table-name-published-company {
+    max-width: 176px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+}
+.company-name-link {
+    color: var(--grey-font);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: none;
+}
+.company-name-link:hover,
+.company-name-link:active {
+    text-decoration-line: underline;
+    color: var(--grey-font);
+}
+.photo-products {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 740px;
+    margin-top: 16px;
+}
+.photo-products-img {
+    height: 120px;
+    margin: 0 8px 8px 0;
+}
+
+
+.company-data {
+    flex-basis: 32%;
+    width: 360px;
+    margin-left: 20px;
+}
+.company-data-info {
+    background-color: var(--light-grey);
+    padding: 16px;
+}
+.company-data-info-inner {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--black-font);
+}
+.company-data-info-inner span {
+    font-weight: bold;
+}
+
+
+
+/*=================
+--------Aside-------
+===================*/
+.aside-banner {
+    display: flex;
+    flex-direction: column;
+}
+.aside-banner-advertising {
+    background-color: #FAFAFA;
+    width: 160px;
+    height: 320px;
+    margin: 0 0 20px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.aside-banner-advertising-text {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--grey-font);
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+
+/*=================
+--------Media-------
+===================*/
