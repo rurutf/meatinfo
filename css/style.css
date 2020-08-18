@@ -96,15 +96,13 @@ p {
 ===================*/
 .page-content {
     display: flex;
-    justify-content: space-between;
-
 }
 .content {
-    flex-basis: 90%;
+    flex-basis: 89%;
 
 }
 .aside {
-    flex-basis: 10%;
+    flex-basis: 11%;
 }
 
 /*--------About company--------*/
@@ -389,7 +387,9 @@ h2 {
     margin: 0 8px 8px 0;
 }
 
-
+.logo {
+    width: 180px;
+}
 .company-data {
     flex-basis: 32%;
     width: 360px;
@@ -437,7 +437,44 @@ h2 {
 }
 
 
+/*Кнопка наверх*/
+#toTop {
+    width: 100px;
+    padding: 5px;
+    position: fixed;
+    bottom: 24px; 
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+.toTop {
+    display: none;
+}
+.toTop:hover {
+    opacity: 0.8;
+}
+.toTop:active {
+    opacity: 0.32;
+}
 
 /*=================
 --------Media-------
 ===================*/
+@media (max-width: 1230px) {
+    .page-content {
+        flex-direction: column;
+    }
+    .aside-banner {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 120px;
+        float: left;
+    }
+    .toTop {
+        display: block;
+    }
+}
